@@ -1,0 +1,120 @@
+:root {
+    font-size: 10px;
+}
+
+
+
+* {
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+
+}
+body,html {
+    font-size: 1.6rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(241, 63, 63);
+}
+#game-board {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+    overflow: hidden;
+    border-bottom: solid 1em rgb(14, 192, 23);
+}
+img, .perdeu, p {
+    position: absolute;
+}
+
+img {
+    margin: 0 0 1em 0;
+    bottom: 0;
+} 
+.jump {
+    animation: jump 500ms ease-in; 
+}
+@keyframes jump {
+    0% {
+     bottom: 0;
+    }
+
+    40% {
+        bottom: 7em;
+    }
+
+    50% {
+        bottom: 7em;
+    }
+
+    60% {
+        bottom: 7em;
+    }
+
+    100% {
+        bottom: 0;
+    }
+
+}
+
+.tubo {
+    animation: correndo 1.3s linear infinite;
+}
+
+@keyframes correndo {
+    from {
+        right: -5%;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+a {
+    display: none;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.perdeu {
+    display: flex;
+    padding: 3rem;
+    background: #87CEEB;
+    border-radius: 10em;
+    transition: 0.5s;
+}
+.perdeu, p {
+border: solid 0.2em #fff;
+color: #fff;
+}
+.perdeu:hover{
+    border: solid 0.2em rgba(26, 25, 25, 0.725);
+    background: #E0F6FF;
+    color:rgba(26, 25, 25, 0.725);
+}
+
+#nv {
+    width: 30em;
+    margin: 0 0 25em;
+    animation: voando 10s linear infinite;
+}
+@keyframes voando {
+    from {
+        right: -10%;
+    }
+    to {
+        right: 100%;
+    }
+}
+p {
+    text-align: center;
+    z-index: 1;
+    font-weight: bold;
+    margin: 0 0 70vh;
+    padding: 1em 2em;
+    background:rgb(26, 25, 25);
+    border-radius: 0.5em;
+}
